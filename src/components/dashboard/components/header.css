@@ -1,0 +1,220 @@
+.header-container {
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #fff;
+  border-bottom: 1px solid #f0f0f0;
+  font-family: 'Arial', sans-serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+.logo {
+  width: 22%;
+}
+
+.logo svg {
+  height: 30px;
+  margin-right: 40px;
+}
+
+.welcome-section {
+  flex-grow: 1;
+}
+
+.welcome-section .greeting {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.welcome-section .wave-emoji {
+  font-size: 20px;
+  margin-left: 5px;
+}
+
+.welcome-section .tagline {
+  font-size: 14px;
+  color: #777;
+  margin: 5px 0 0 0;
+}
+
+.actions-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.see-rates-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #007bff;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.see-rates-link .icon {
+  margin-right: 5px;
+  font-size: 16px;
+}
+
+.language-dropdown-wrapper {
+  position: relative;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  min-width: 120px;
+}
+
+.language-dropdown {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  color: #333;
+  width: 100%;
+  padding-right: 20px;
+  outline: none;
+  cursor: pointer;
+}
+
+.language-dropdown-wrapper::after {
+  content: '▼';
+  position: absolute;
+  right: 12px;
+  font-size: 10px;
+  color: #777;
+  pointer-events: none;
+}
+
+.settings-icon {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #f7f7f7;
+  border: 1px solid #e0e0e0;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.settings-icon:hover {
+  background-color: #e6e6e6;
+}
+
+.settings-icon .icon {
+  font-size: 20px;
+  color: #777;
+}
+
+.profile-initial {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  color: #555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+/* Hide menu icon by default on desktop */
+.menu-icon {
+  display: none;
+}
+
+/* --- Mobile Styles --- */
+@media (max-width: 1000px) {
+  .header-container {
+      padding: 10px 15px; 
+      justify-content: space-between; 
+  }
+
+  .logo svg {
+      height: 25px; 
+      margin-right: 15px; 
+  }
+
+  .welcome-section {
+      flex-grow: 1;
+      display: flex; 
+      align-items: center;
+  }
+
+  .welcome-section .greeting {
+      font-size: 16px; 
+  }
+
+  .welcome-section .wave-emoji {
+      font-size: 16px;
+  }
+
+  .welcome-section .tagline {
+      display: none;
+  }
+
+  .actions-section {
+      gap: 10px; 
+  }
+
+  .see-rates-link {
+      display: none; 
+  }
+
+  .language-dropdown-wrapper {
+      padding: 5px 10px; /* Smaller padding */
+      min-width: unset; /* Remove min-width constraint */
+      width: 100px; /* Set a specific width for compactness */
+  }
+
+  .language-dropdown {
+      font-size: 13px; /* Smaller font for dropdown */
+  }
+
+  .language-dropdown-wrapper::after {
+      right: 8px; /* Adjust arrow position */
+  }
+
+  .settings-icon {
+      display: none; /* Hide settings icon on mobile, or keep it if desired */
+  }
+
+  .profile-initial {
+      width: 30px;
+      height: 30px;
+      font-size: 14px; 
+  }
+
+
+  .menu-icon {
+      display: flex; 
+      width: 35px; 
+      height: 35px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px; 
+      border: 1px solid #e0e0e0;
+      cursor: pointer;
+      background-color: #f7f7f7;
+      margin-left: 5px; 
+  }
+
+  .menu-icon .icon {
+      font-size: 20px;
+      color: #777;
+  }
+}

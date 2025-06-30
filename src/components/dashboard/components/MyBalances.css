@@ -1,0 +1,273 @@
+/* MyBalances.css */
+
+.my-balances-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 20px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.info-icon {
+  background: none;
+  border: none;
+  color: #a0a0a0;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.add-new-balance-btn {
+  background-color: #e0f2fe; /* Light blue */
+  color: #007bff; /* Blue text */
+  border: 1px solid #cce5ff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.add-new-balance-btn:hover {
+  background-color: #cce5ff;
+  border-color: #99ccff;
+}
+
+.plus-icon {
+  font-size: 16px;
+}
+
+.currency-selector {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+  overflow-x: auto; /* Enable horizontal scroll for currencies on small screens */
+  padding-bottom: 5px; /* Space for scrollbar */
+  -webkit-overflow-scrolling: touch;
+}
+
+.currency-selector::-webkit-scrollbar {
+  height: 5px;
+}
+
+.currency-selector::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.currency-selector::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.currency-selector::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+
+.currency-btn {
+  background-color: #f0f0f0;
+  color: #555;
+  border: 1px solid #e0e0e0;
+  padding: 8px 15px;
+  border-radius: 20px; /* Pill shape */
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  white-space: nowrap; /* Prevent wrapping currency names */
+}
+
+.currency-btn.active {
+  background-color: #007bff;
+  color: #ffffff;
+  border-color: #007bff;
+}
+
+.currency-btn:hover:not(.active) {
+  background-color: #e5e5e5;
+  border-color: #d0d0d0;
+}
+
+.currency-flag {
+  font-size: 18px;
+  line-height: 1; /* Align emoji properly */
+}
+
+.balance-details {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-bottom: 30px;
+  flex-direction: column; /* Stack columns on mobile */
+  gap: 20px; /* Space between balance columns on mobile */
+}
+
+.balance-column {
+  flex: 1;
+}
+
+.balance-label {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.balance-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+.action-btn {
+  background-color: #f8f8f8;
+  color: #333;
+  border: 1px solid #e0e0e0;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  flex: 1 1 auto; /* Allow buttons to grow/shrink based on space */
+  min-width: 120px; /* Minimum width for buttons */
+}
+
+.action-btn:hover {
+  background-color: #e8e8e8;
+  border-color: #d0d0d0;
+}
+
+.exchange-icon,
+.external-link-icon {
+  font-size: 16px;
+}
+
+.toggle-balance-visibility-btn {
+  background: none;
+  border: none;
+  color: #007bff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.toggle-balance-visibility-btn:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (min-width: 600px) {
+  .balance-details {
+    flex-direction: row; /* Columns side-by-side on larger mobile/tablet */
+  }
+}
+
+@media (min-width: 768px) {
+  .my-balances-card {
+    padding: 30px;
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+
+  .add-new-balance-btn {
+    padding: 10px 15px;
+    font-size: 15px;
+  }
+
+  .currency-selector {
+    justify-content: center; /* Center currencies on desktop */
+    overflow-x: hidden; /* Disable horizontal scroll on desktop */
+    padding-bottom: 0;
+  }
+
+  .balance-details {
+    gap: 30px; /* More space between balance columns on desktop */
+  }
+
+  .balance-label {
+    font-size: 15px;
+  }
+
+  .balance-value {
+    font-size: 32px;
+  }
+
+  .action-buttons {
+    flex-wrap: nowrap; /* Prevent buttons from wrapping on desktop */
+    justify-content: center;
+    gap: 20px; /* More space between action buttons on desktop */
+  }
+
+  .action-btn {
+    padding: 12px 20px;
+    font-size: 15px;
+    flex: 0 0 auto; /* Do not grow/shrink as much, rely on content */
+    min-width: unset;
+  }
+
+  .toggle-balance-visibility-btn {
+    padding-top: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .my-balances-card {
+    padding: 40px;
+  }
+
+  .card-title {
+    font-size: 22px;
+  }
+
+  .balance-value {
+    font-size: 36px;
+  }
+}

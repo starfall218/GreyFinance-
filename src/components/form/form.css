@@ -1,0 +1,415 @@
+.formBox {
+  justify-content: space-evenly;
+  width: 100%;
+  height: max-content;
+}
+.formBox, .sign-UpForm, .round-circle, .steps, .continue-btn-box, .image-slider {
+  display: flex;
+  align-items: center;
+}
+.language-box {
+  padding: min(4rem, 8%) 0 0;
+  width: min(95%, 400px);
+}
+.image-slider {
+  display: none;
+}
+.continue-btn a {
+  width: 100%;
+}
+.sign-UpForm {
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: #e6e6e6;
+}
+.steps {
+  width: 100%;
+  background-color: #fff;
+  padding: 1.3rem min(4rem, 8%);
+  gap: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+.round-circle {
+  background: linear-gradient(rgb(0, 119, 255), rgb(0, 195, 255));
+  justify-content: center;
+  border-radius: 50%;
+  width: 25px;
+  height: 20px;
+}
+
+.inner-circle {
+  background-color: rgb(230, 230, 230);
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+.right-steps, .country-selector {
+  display: flex;
+  flex-direction: column;
+}
+.sign-up-steps {
+  font-size: 0.8rem;
+  color: rgb(194, 194, 194);
+}
+.steps p {
+  color: #000;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-wrap: nowrap;
+}
+.processes {
+  width: 60%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 6px;
+  margin-top: 20px;
+}
+.process-box {
+  display: flex;
+  align-items: center;
+}
+.step-line {
+  width: 90%;
+  height: 1px;
+  background-color: #e6e6e6;
+}
+.step-line .inner-circle {
+  background-color: #e6e6e6;
+}
+
+/* Forms */
+.form-box {
+  padding: min(2rem, 8%);
+  background-color: #fff;
+  border-radius: 10px;
+  color: #000;
+}
+.form-box h1 {
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+.form-box select {
+  border: 1px solid rgb(230, 230, 230);
+  padding: 0.5rem 3px;
+  border-radius: 5px;
+}
+.form-box select:active {
+  border: 1px solid #082f74;
+}
+.form-box select:focus {
+  border: 1px solid #082f74;
+}
+.kindly-note {
+  gap: 7px;
+  background-color: #e8f0fc;
+  margin-top: 1rem;
+  padding: 12px 8px;
+  color: #082f74;
+  border-radius: 9px;
+}
+.kindly-note-text {
+  font-family: Aeonik;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  margin-bottom: 7px;
+}
+.warning-text {
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+.continue-btn {
+  margin-top: 1rem;
+  background-color: #e6e6e6;
+  color: rgb(133, 146, 173);
+  width: 100%;
+  min-width: 125px;
+  border-radius: 9px;
+  padding: 0.7rem 1rem;
+  font-weight: 600;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px -1px 2px 0px inset, rgba(255, 255, 255, 0.3) 0px 1px 3px 0px inset;
+  transition: color 0.20s ease-in-out, background-color 0.15s ease-in;
+  cursor: pointer;
+}
+.continue-btn:hover {
+  color: #fff;
+  background-color: #2467E3;
+}
+
+.sign-in-link {
+  text-align: center;
+  color: #666666b3;
+  padding: 11px 0;
+}
+.create-account-testid {
+  color: #2467E3;
+}
+
+
+/* The step 2 form */
+
+.arrow-back {
+  cursor: pointer;
+  border-right: 1px solid rgb(230, 230, 230);
+  padding-right: 10px;
+}
+.arrow-back-box svg {
+  width: 30px;
+  height: 30px;
+}
+.step-one-success svg {
+  width: 90%;
+}
+.steps-2-title span {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 140%;
+  text-transform: uppercase;
+  color: rgb(128, 128, 128);
+}
+.steps-2-title p {
+  color: rgb(26, 26, 26);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.remaining-steps {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* The start of the form box with inputs! */
+.input-box label {
+  font-size: 0.875rem;
+  line-height: 20px;
+  color: rgb(27, 31, 40);
+  font-weight: 600;
+}
+.sign-up-form {
+  margin-top: 15px;
+}
+.sign-up-form .input-box input {
+  border: 1px solid #A3ADC2;
+}
+.sign-up-form .input-box input:focus {
+  border: 1px solid #2467E3;
+}
+.input-box input, .input-box select, .password-input {
+  padding: 16px 12px;
+  font-size: 0.875rem;
+  color: rgb(73, 84, 108);
+  border: 1px solid rgb(73, 84, 108);
+  width: 100%;
+  border-radius: 8px;
+  outline: none;
+  background-color: transparent;
+}
+.password-conditions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 0.5rem;
+}
+
+.password-condition {
+  border-radius: 9999px;
+  padding: 0.25rem 0.75rem;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  font-size: 0.875rem;
+}
+
+.password-condition svg {
+  margin-right: 4px;
+}
+
+/* Log in form */
+.login-box .language-box {
+  padding: min(2rem, 8%) ;
+  border-radius: 13px;
+}
+.login-box h1 {
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.or-continue-with {
+  color: #A3ADC2;
+  font-size: 0.7rem;
+}
+.or-continue-with::before {
+  content: '';
+  width: calc(60% - 90px);
+  height: 1px;
+  background-color: #A3ADC2;
+}
+.or-continue-with::after {
+  content: '';
+  width: calc(60% - 90px);
+  height: 1px;
+  background-color: #A3ADC2;
+}
+.google-sign-in {
+  width: 100%;
+  min-width: 125px;
+  gap: 6px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  padding: 1rem;
+  font-weight: 600;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px -1px 2px 0px inset, rgba(255, 255, 255, 0.3) 0px 1px 3px 0px inset;
+  cursor: pointer;
+  background: rgb(255, 255, 255);
+  color: rgb(54, 63, 81);
+  border: 1px solid rgb(240, 242, 245);
+}
+.password-box  {
+  border: 1px solid #A3ADC2;
+  border-radius: 8px;
+}
+.sign-up-form .input-box .password-box .password-remove-border {
+  border: none
+}
+.eye-button {
+  padding-right: 4px;
+}
+.login-box .continue-btn {
+  background-color: #2467E3;
+  color: #fff;
+}
+.login-box .continue-btn:hover {
+  background-color: #1956c7;
+}
+.terms-and-condition {
+  margin-top: 10px;
+}
+.terms-condition-box input {
+  width: 20px;
+}
+@media screen and (min-width: 1100px) {
+  .formBox {
+    height: 100dvh;
+  }
+  .image-slider {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    background-color: #e6e6e6;
+  }
+
+  .invr1 {
+    --r: 20px; /* the radius */
+    --s: 30px; /* size of inner curve */
+    --x: 20px; /* horizontal offset (no percentage) */
+    --y: 10px; /* vertical offset (no percentage) */
+    
+    width: 100%;
+    height: 250px;
+    aspect-ratio: 1;
+    background: #fff;
+    border-radius: 0;
+    --_m:/calc(2*var(--r)) calc(2*var(--r)) radial-gradient(#000 70%,#0000 72%);
+    --_g:conic-gradient(at var(--r) var(--r),#000 75%,#0000 0);
+    --_d:(var(--s) + var(--r));
+    mask:
+      calc(var(--_d) + var(--x)) 0 var(--_m),
+      0 calc(var(--_d) + var(--y)) var(--_m),
+      radial-gradient(var(--s) at 0 0,#0000 99%,#000 calc(100% + 1px)) 
+       calc(var(--r) + var(--x)) calc(var(--r) + var(--y)),
+      var(--_g) calc(var(--_d) + var(--x)) 0,
+      var(--_g) 0 calc(var(--_d) + var(--y));
+    mask-repeat: no-repeat;
+  }
+  .invr2 {
+    --r: 20px; /* the radius */
+    --s: 30px; /* size of inner curve */
+    --x: 20px; /* horizontal offset (no percentane) */
+    --y: 10px; /* vertical offset (no percentage) */
+    background-color: #fff;
+    width: 100%;
+    height: 250px;
+    aspect-ratio: 1;
+    --_m:/calc(2*var(--r)) calc(2*var(--r)) radial-gradient(#000 70%,#0000 72%);
+    --_g:conic-gradient(from 90deg at calc(100% - var(--r)) calc(100% - var(--r)),#0000 25%,#000 0);
+    --_d:(var(--s) + var(--r));
+    mask:
+      calc(100% - var(--_d) - var(--x)) 100% var(--_m),
+      100% calc(100% - var(--_d) - var(--y)) var(--_m),
+      radial-gradient(var(--s) at 100% 100%,#0000 99%,#000 calc(100% + 1px)) 
+       calc(-1*var(--r) - var(--x)) calc(-1*var(--r) - var(--y)),
+      var(--_g) calc(-1*var(--_d) - var(--x)) 0,
+      var(--_g) 0 calc(-1*var(--_d) - var(--y));
+    mask-repeat: no-repeat;
+  }
+  .invr3 {
+    width: 100%;
+    height: calc(100% - 250px - 50px);
+    background-color: #fff;
+    top: 18%;
+  }
+  .slide-formImage-box{
+    width: 100%;
+    height: 90%;
+  }
+  .sign-UpForm {
+    justify-content: center;
+    width: 50%;
+  }
+  .slider-desc {
+    margin-top: 20px;
+    width: 100%;
+  }
+  .slide-title {
+    width: min(60%, 400px);
+    color: rgb(23, 43, 77);
+    font-size: 2rem;
+    font-weight: 700;
+    word-wrap: break-word;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  .slide-para {
+    color: #000;
+    text-align: center;
+    transition: all 0.14s ease-in-out;
+  }
+  .inverted-radius {
+    margin-top: 2.7rem;
+    width: min(70%, 200px);
+    transition: all 1s ease-in-out;
+  }
+  .slide-form-Image-box {
+    width: 100%;
+  }
+  .inner-img-slider {
+    width: 100%;
+    height: 300px;
+  }
+  /* Step 2 form */
+  .inputboxes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .mobile-step-form-box {
+    width: 70%;
+  }
+  .mobile-step-form-box .language-box {
+    width: min(95%, 600px);
+    padding: min(0.4rem, 8%) 2rem 0;
+  }
+  
+  
+}
