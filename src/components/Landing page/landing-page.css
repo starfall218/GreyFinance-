@@ -91,16 +91,16 @@
   z-index: 3;
 }
 
+/* Updated hand-cover-2 styles */
 .hand-cover-2 {
   background-image: url(https://cdn.prod.website-files.com/6360022338a81bd6fdbb1145/67f8f68b6a43a328b669a59c_handWithPhone.avif);
-  background-position: 50%;
+  background-position: 0% 0% ; /* Changed to a standard center position for better control */
   background-repeat: no-repeat;
-  background-size: auto 100%;
-  width: 600px;
-  height: 710.033px;
+  background-size: contain; /* Changed to 'contain' to ensure the whole image is visible within its bounds */
   position: absolute;
-  inset: -14% 3% 0% auto;
+  inset: 0;
   overflow: visible;
+  
 }
 
 .text-gradient {

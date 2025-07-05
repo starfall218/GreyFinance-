@@ -65,12 +65,14 @@
   position: relative;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
-  padding: 8px 12px;
   cursor: pointer;
   background-color: #fff;
   display: flex;
   align-items: center;
   min-width: 120px;
+}
+.language-dropdown {
+  margin-bottom: 0;
 }
 
 .language-dropdown {
@@ -131,7 +133,9 @@
   font-size: 16px;
   flex-shrink: 0;
 }
-
+.currTabOrsectName {
+  font-size: 1.5rem;
+}
 /* Hide menu icon by default on desktop */
 .menu-icon {
   display: none;

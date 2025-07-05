@@ -5,10 +5,15 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import Payment from './components/dashboard/components/Payments';
 import LandingPage from './components/Landing page/landing-page';
+import UserCard from './components/dashboard/components/my-card-dashboard';
+import TermsAndConditions from './components/dashboard/components/terms-conditions-section-dashb';
+
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<LandingPage />} />
+      <Route path="/" element={<Home_Dashboard />} />
+      <Route path="/termsandconddashb" element={<TermsAndConditions />} />
+      <Route path="/usercard" element={<UserCard />} />
       <Route path="/signup" element={<SignUp />} />
       <Route path="/login" element={<LogIn />} />
       <Route path="/payment" element={<Payment />} />

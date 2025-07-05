@@ -8,9 +8,9 @@ import sixth from "../images/last-grid.png";
 
 const ImageGrid = () => {
   return (
-    <section id="image-grid" className="bg-white py-12 px-6">
+    <section id="image-grid" className="bg-white py-12 px-4 sm:px-6 lg:px-8"> {/* Added responsive padding */}
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 overflow-hidden width-[100vw]">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 overflow-hidden"> {/* Removed width-[100vw] */}
           {/* Full width top image */}
           <div className="md:col-span-12">
             <a href="#">
@@ -22,27 +22,30 @@ const ImageGrid = () => {
             </a>
           </div>
 
-          {/* Two side-by-side images */}
-          <div className="md:col-span-5 w-[30rem] h-[53rem]">
-            <a href="#">
-              <img
-                src={second}
-                alt="Convert money at the best rate"
-                className="w-[100%]  rounded-lg shadow-md hover:shadow-lg transition-shadow "
-              />
-            </a>
-          </div>
-          <div className="w-[40rem] h-[51rem] md:col-span-1 ">
-            <a href="#">
-              <img
-                src={third}
-                alt="Shop and spend globally"
-                className="w-[100%] h-[100%] rounded-lg shadow-md hover:shadow-lg transition-shadow mr-28"
-              />
-            </a>
+          {/* Two side-by-side images (Second and Third) */}
+          {/* On mobile, they stack. On MD and up, they are side-by-side within their column span */}
+          <div className="md:col-span-12 grid grid-cols-1 md:grid-cols-2 gap-8"> {/* Nested grid for 2 columns */}
+            <div className="col-span-1"> {/* Each takes 1 column on mobile, 1 of 2 on md+ */}
+              <a href="#">
+                <img
+                  src={second}
+                  alt="Convert money at the best rate"
+                  className="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                />
+              </a>
+            </div>
+            <div className="col-span-1">
+              <a href="#">
+                <img
+                  src={third}
+                  alt="Shop and spend globally"
+                  className="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow" // Removed mr-28
+                />
+              </a>
+            </div>
           </div>
 
-          {/* Full width middle image */}
+          {/* Full width middle image (Fourth) */}
           <div className="md:col-span-12">
             <a href="#">
               <img
@@ -53,24 +56,27 @@ const ImageGrid = () => {
             </a>
           </div>
 
-          {/* Two side-by-side images */}
-          <div className="md:col-span-5 w-[30rem] h-[53rem]">
-            <a href="#">
-              <img
-                src={fifth}
-                alt="Manage multiple currencies"
-                className="w-[100%] h-[100%] rounded-lg shadow-md hover:shadow-lg transition-shadow"
-              />
-            </a>
-          </div>
-          <div className="w-[43rem] h-[53rem] md:col-span-1">
-            <a href="#">
-              <img
-                src={sixth}
-                alt="Secure international transactions"
-                className="[100%] h-[100%] rounded-lg shadow-md hover:shadow-lg transition-shadow"
-              />
-            </a>
+          {/* Two side-by-side images (Fifth and Sixth) */}
+          {/* Similar to second and third, they stack on mobile, go side-by-side on MD+ */}
+          <div className="md:col-span-12 grid grid-cols-1 md:grid-cols-2 gap-8"> {/* Nested grid for 2 columns */}
+            <div className="col-span-1">
+              <a href="#">
+                <img
+                  src={fifth}
+                  alt="Manage multiple currencies"
+                  className="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                />
+              </a>
+            </div>
+            <div className="col-span-1">
+              <a href="#">
+                <img
+                  src={sixth}
+                  alt="Secure international transactions"
+                  className="w-full h-auto rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                />
+              </a>
+            </div>
           </div>
         </div>
       </div>

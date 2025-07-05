@@ -6,7 +6,11 @@
   border-right: 1px solid #e5e7eb;
   min-height: calc(100vh - 73px);
 }
-
+.grey-sidebar-logo {
+  padding: 15px 30px;
+  height: 86px;
+  border-bottom: 1px solid #e5e7eb;
+}
 .sidebar nav {
   padding: 1rem;
 }

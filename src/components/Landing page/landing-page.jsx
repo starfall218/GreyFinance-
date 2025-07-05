@@ -1,10 +1,9 @@
 import React from 'react';
 import GreyNavbar from './components/header';
-import './landing-page.css'; 
 import BankingHero from './components/section-1.jsx';
-import PressSection from './components/PressSection.jsx'; 
+import PressSection from './components/PressSection.jsx';
 import ImageGridSection from './components/ImageGridSection.jsx'; 
-import Footer from './components/footer/Footer.jsx'; // Adjust the import path as necessary
+import Footer from './components/footer/Footer.jsx'; 
 import { Globe } from 'lucide-react';   
 import WithGrey from './components/withgrey.jsx';
 import Umm from './components/hoverboxes.jsx';
@@ -12,7 +11,7 @@ import Twowomen from './components/SectionComponent.jsx';
 import MoreThanBankingCarousel from './components/MoreThsnBankingCarousel.jsx';
 import ProductQualityCarousel from './components/ProductQualityCarousel.jsx';
 import TestimonialCarousel from './components/TestimonialCarousel.jsx';
-const LandingPage = () => {
+const App = () => {
   return (
     <div>
       <GreyNavbar />
@@ -31,4 +30,4 @@ const LandingPage = () => {
   );
 };
 
-export default LandingPage;
+export default App;

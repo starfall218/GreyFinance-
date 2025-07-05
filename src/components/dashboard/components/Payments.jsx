@@ -1,4 +1,4 @@
-import Header from "./Header";
+import Header from "./othersectionsHeader";
 import "./payments.css";
 import Sidebar from "./Sidebar";
 
@@ -8,7 +8,7 @@ const Payment = () => {
     <div className="main-dashboard-box flex">
       <Sidebar/>
       <div className="right-board-box">
-        <Header/>
+        <Header name='Payment'/>
       <div className="payment-container">
       {/* Bills, Airtime & Gift Cards Section */}
       <div className="payment-section-container">

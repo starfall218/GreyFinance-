@@ -1,0 +1,42 @@
+.main-sect-for-terms {
+  flex-direction: column;
+  padding: 30px;
+}
+.each-term-box {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #e8f0f6;
+  border-radius: 10px;
+}
+ .cards-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #e8f0f6;
+  border-radius: 10px;
+ }
+ .disable-box-term {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.452);
+ }
+ .coming-soon {
+  top: 0;
+  right: 0;
+  background-color: #EFE4FB;
+  color: #5b19e3;
+  padding: 8px 10px;
+ }
+ @media screen and (min-width: 700px) {
+  .main-sect-for-terms {
+    flex-direction: row;
+  }
+  .each-term-box {
+    width: 40%;
+  }
+ }

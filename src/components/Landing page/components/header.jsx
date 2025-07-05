@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Globe, Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
 const GreyNavbar = () => {
   const [bgColor, setBgColor] = useState("bg-white");
   const [menuOpen, setMenuOpen] = useState(false);
@@ -56,21 +57,17 @@ const GreyNavbar = () => {
 
       {/* Right section - hidden on small screens */}
       <div className="max-md:hidden min-[768px]:flex items-center gap-4">
-        <Link to='login' className="text-gray-700 font-medium text-sm">Log in</Link>
-        <Link to='/signup'>
-          <button className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-blue-700 transition">
+        <a href="#" className="text-gray-700 font-medium text-sm">Log in</a>
+        <button className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-blue-700 transition">
           Get started — it's free
         </button>
-        </Link>
       </div>
 
       {/* Hamburger Icon - shown on small screens */}
       <div className="md:hidden">
-
         <button onClick={() => setMenuOpen(true)}>
           <Menu className="w-6 h-6 text-black" />
         </button>
-
       </div>
 
       {/* Mobile Menu Overlay */}
@@ -100,7 +97,7 @@ const GreyNavbar = () => {
 
           <div className="mt-auto space-y-4">
             <button className="w-full bg-black text-white py-3 rounded-md font-semibold">Log In</button>
-            <button className="w-full bg-blue-600 text-white py-3 rounded-md font-semibold">Get started – It's free</button>
+            <Link to='/signup'><button className="w-full bg-blue-600 text-white py-3 rounded-md font-semibold">Get started – It's free</button></Link>
           </div>
         </div>
       )}
