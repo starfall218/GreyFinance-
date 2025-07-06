@@ -4,14 +4,18 @@ import MainContent from './components/MainContent';
 import ReferralCard from './components/ReferralCard';
 import ChatWidget from './components/ChatWidget';
 import './extra-dashboard.css'
+import { useState } from 'react';
 
-function Home_Dashboard() {
+function Home_Dashboard() { 
+  const [sidebarOpen, setSidebarOpen] = useState(false)
   return (
     
     <div className="dash-cont w-12/12 flex">
-      <Sidebar/>
+      <Sidebar isOpen={sidebarOpen}/>
       <div className="main-layout flex-col">
-      <Header />
+      <Header toggleSidebar={()=>{
+        setSidebarOpen(prev => !prev)
+      }} />
         <main className="content">
           <MainContent />
         </main>
