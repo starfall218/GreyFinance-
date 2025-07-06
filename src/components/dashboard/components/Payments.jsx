@@ -1,14 +1,18 @@
+import { useState } from "react";
 import Header from "./othersectionsHeader";
 import "./payments.css";
 import Sidebar from "./Sidebar";
 
 
 const Payment = () => {
+    const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
     <div className="main-dashboard-box flex">
-      <Sidebar/>
+         <Sidebar isOpen={sidebarOpen}/>
       <div className="right-board-box">
-        <Header name='Payment'/>
+        <Header name='Payment' toggleSidebar={()=>{
+        setSidebarOpen(prev => !prev)
+      }}/>
       <div className="payment-container">
       {/* Bills, Airtime & Gift Cards Section */}
       <div className="payment-section-container">

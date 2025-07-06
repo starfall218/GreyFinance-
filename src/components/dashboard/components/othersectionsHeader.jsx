@@ -1,13 +1,13 @@
-import React from 'react';
-import './header.css'; 
+import React, { useState } from 'react';
+import './Header.css'; 
 
-const Header = (props) => {
+const Header = ({toggleSidebar, name}) => {
     const userDataStore = localStorage.getItem('signupData');
     const userData = JSON.parse(userDataStore);
     return (
         <div className="header-container">
             <div className="welcome-section">
-                <h1 className='currTabOrsectName'>{props.name}</h1>
+                <h1 className='currTabOrsectName'>{name}</h1>
             </div>
             <div className="actions-section">
                 <a href="#" className="see-rates-link">
@@ -28,7 +28,7 @@ const Header = (props) => {
                 </div>
                 {/* Mobile-specific menu icon */}
                 <div className="menu-icon">
-                    <span className="icon">☰</span>
+                    <span className="icon" onClick={toggleSidebar}>☰</span>
                 </div>
             </div>
         </div>

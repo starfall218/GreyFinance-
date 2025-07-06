@@ -1,13 +1,14 @@
 import React from 'react';
 import './header.css'; 
 
-const Header = () => {
+const Header = ({toggleSidebar}) => {
     const userDataStore = localStorage.getItem('signupData');
     const userData = JSON.parse(userDataStore);
     return (
         <div className="header-container">
             <div className="welcome-section">
                 <p className="greeting capitalize">Hello {userData.firstname} <span className="wave-emoji">👋🏾</span></p>
+                
                 {/* The tagline will be hidden on mobile via CSS */}
                 <p className="tagline">Send, save and receive funds in various currencies</p>
             </div>
@@ -30,7 +31,7 @@ const Header = () => {
                     J
                 </div>
                 {/* Mobile-specific menu icon */}
-                <div className="menu-icon">
+                <div className="menu-icon" onClick={toggleSidebar}>
                     <span className="icon">☰</span>
                 </div>
             </div>

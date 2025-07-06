@@ -48,10 +48,13 @@ function userCard(){
       p: current.p,
     });
   }, [currentIndex]);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   return <div className="the-board-box flex">
-    <Sidebar/>
+      <Sidebar isOpen={sidebarOpen}/>
     <div className="main-dashboard-stuff w-12/12">
-      <Header name='Card'/>
+      <Header name='Card' toggleSidebar={()=>{
+        setSidebarOpen(prev => !prev)
+      }}/>
       <div className="main-sect-for-card flex">
       <div className="img-slider-cards flex-col ">
         <img  src={box.imgLinkDesc} alt="Slider image description"/>

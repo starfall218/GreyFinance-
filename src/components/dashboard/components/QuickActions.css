@@ -5,8 +5,11 @@
   margin: 20px auto;
   max-width: 1200px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  overflow: scroll;
 }
-
+.quick-actions-section::-webkit-scrollbar {
+  display: none;
+}
 .section-title {
   font-size: 1.25rem;
   font-weight: 600;

@@ -32,11 +32,55 @@
   color: #5b19e3;
   padding: 8px 10px;
  }
+ 
+.cancel-box-btn, .cancel-btn {
+  margin-top: 1rem;
+  background-color: #e6e6e6;
+  color: rgb(133, 146, 173);
+  width: 100%;
+  min-width: 125px;
+  border-radius: 9px;
+  padding: 0.7rem 1rem;
+  font-weight: 600;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px -1px 2px 0px inset, rgba(255, 255, 255, 0.3) 0px 1px 3px 0px inset;
+  transition: color 0.20s ease-in-out, background-color 0.15s ease-in;
+  cursor: default;
+}
+.cancel-icon-terms {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  right: 7px;
+  cursor: pointer;
+  top: 1px;
+}
+.cancel-btn {
+  color: #000;
+}
+.cancel-btn:hover {
+  cursor: pointer;
+  background-color: #d4d1d1;
+}
+/* Blurred bg */
+.blurred-box  {
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #413d3d0e;
+  backdrop-filter: blur(5px);
+  padding: 5px min(10%, 10px);
+}
  @media screen and (min-width: 700px) {
   .main-sect-for-terms {
     flex-direction: row;
   }
   .each-term-box {
-    width: 40%;
+    width: min(40%, 400px);
   }
  }
