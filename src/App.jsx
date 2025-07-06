@@ -11,7 +11,7 @@ import TermsAndConditions from './components/dashboard/components/terms-conditio
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home_Dashboard />} />
+      <Route path="/" element={<LandingPage />} />
       <Route path="/termsandconddashb" element={<TermsAndConditions />} />
       <Route path="/usercard" element={<UserCard />} />
       <Route path="/signup" element={<SignUp />} />
