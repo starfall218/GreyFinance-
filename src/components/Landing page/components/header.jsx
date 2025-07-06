@@ -96,7 +96,7 @@ const GreyNavbar = () => {
           </div>
 
           <div className="mt-auto space-y-4">
-            <button className="w-full bg-black text-white py-3 rounded-md font-semibold">Log In</button>
+             <Link to='/login'><button className="w-full bg-black text-white py-3 rounded-md font-semibold">Log In</button></Link>
             <Link to='/signup'><button className="w-full bg-blue-600 text-white py-3 rounded-md font-semibold">Get started – It's free</button></Link>
           </div>
         </div>
