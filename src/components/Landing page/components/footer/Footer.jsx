@@ -1,5 +1,5 @@
 import React from 'react';
-import './Footer.css'; // Assuming you have a CSS file for footer styles
+import './footer.css'; // Assuming you have a CSS file for footer styles
 import appstore from './footerimg/appstore.webp';
 import googleplay from './footerimg/googleplay.webp';
 export default function Footer() {
