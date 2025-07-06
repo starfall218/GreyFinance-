@@ -57,7 +57,7 @@ function TermsAndConditions (){
     </div>
     </div>
     
-    <div className={`blurred-box absolute z-1 w-12/12 ${show ? 'flex' : 'hidden'} items-center justify-center`}>
+    <div className={`blurred-box absolute z-1 w-12/12 ${show ? 'hidden' : 'flex'} items-center justify-center`}>
     <div className="each-term-box  flex flex-col gap-3 relative z-1 w-11/12 bg-white">
       <div className="cancel-icon-terms" onClick={displayBox}>
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.91748 5.91666L14.0836 14.0828" stroke="#2D3443" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5.91677 14.0828L14.0829 5.91666" stroke="#2D3443" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
