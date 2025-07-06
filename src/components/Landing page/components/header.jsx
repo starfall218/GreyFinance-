@@ -56,11 +56,13 @@ const GreyNavbar = () => {
       </div>
 
       {/* Right section - hidden on small screens */}
-      <div className="max-md:hidden min-[768px]:flex items-center gap-4">
-        <a href="#" className="text-gray-700 font-medium text-sm">Log in</a>
-        <button className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-blue-700 transition">
+       <div className="max-md:hidden min-[768px]:flex items-center gap-4">
+        <Link to="/login" className="text-gray-700 font-medium text-sm">Log in</Link>
+        <Link to="/signup">
+          <button className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-blue-700 transition">
           Get started — it's free
         </button>
+        </Link>
       </div>
 
       {/* Hamburger Icon - shown on small screens */}
