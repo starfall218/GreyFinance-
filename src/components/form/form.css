@@ -1,7 +1,7 @@
 .formBox {
   justify-content: space-evenly;
   width: 100%;
-  height: max-content;
+  height: 100vh;
 }
 .formBox, .sign-UpForm, .round-circle, .steps, .continue-btn-box, .image-slider {
   display: flex;
